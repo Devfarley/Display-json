@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Characters from './characters'
+
+
+class Title extends React.Component {
+  render() {
+    return <div>
+      <h1>Hello! This site displays Rick and Morty Characters. </h1>
+      <Characters />
+      {/* <h2>{character.map((character) => {
+        const name = character.name
+        const species = character.species
+        const text=`Name: ${name} | Species: ${species} \n`
+        return text.split('\n').map((item) => <p>{item}</p>);
+      })} </h2> */}
+    </div> 
+  }
+}
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Title />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+                                                                             
